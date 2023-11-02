@@ -7,7 +7,8 @@
   <meta charset="utf-8" />
   <link rel="stylesheet" href="styles.css" />
   <title>Verkefni 8: Vefverslunarkarfa</title>
-  <script src="main.js" type="module"></script>
+  <script src="main.js" type="module" async></script>
+  
 </head>
 
 <body>
@@ -59,10 +60,11 @@
           </tr>
         </tbody>
       </table>
+      
     </section>
-    <section>
+    <section class="cart">
       <h2>Karfa</h2>
-      <div class="cart">
+      <div class="cart-message">
         <p class="empty-message">Ekkert í körfu.</p>
         <div class="cart-content hidden">eitthvað í körfu.</div>
       </div>
@@ -78,22 +80,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr data-cart-product-id="1">
-            <td class="title">HTML húfa</td>
-            <td class="quantity">1</td>
-            <td class="price"><span class="price">5.000 kr.-</span></td>
-            <td class="total"><span class="price">5.000 kr.-</span></td>
-            <td>
-              <form class="remove" method="post">
-                <button>Eyða</button>
-              </form>
-            </td>
-          </tr>
         </tbody>
         <tfoot>
           <tr>
             <td colspan="3">Samtals</td>
-            <td><span class="price">5.000 kr.-</span></td>
+            <td><span class="price">0 kr.-</span></td>
             <td></td>
           </tr>
         </tfoot>
@@ -101,7 +92,7 @@
 
       </div>
 
-      <form method="post">
+      <form method="post" class="order-submit">
         <div class="form-field">
           <label for="name">Nafn:</label>
           <input type="text" name="name" id="name">
@@ -110,11 +101,11 @@
           <label for="address">Heimilisfang:</label>
           <input type="text" name="address" id="address">
         </div>
-        <button>Ganga frá kaupum</button>
+        <button class="submit">Ganga frá kaupum</button>
       </form>
 
     </section>
-    <section class="receipt">
+    <section class="receipt hidden">
       <h2>Kvittun</h2>
       <p>Takk fyrir að versla hjá okkur!</p>
       <p><a href=".">Kaupa meira</a>.</p>
@@ -122,4 +113,4 @@
   </main>
 </body>
 
-</html>
+</html> 
